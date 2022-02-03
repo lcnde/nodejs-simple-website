@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
   console.log(req.url, req.method);
 
   // set header content type
-  res.setHeader('Content-Type', 'text/html; charset=UTF-8');
+  res.setHeader('Content-Type', 'text/html');
 
   // basic routing
   let path = './views/';
@@ -43,6 +43,6 @@ const server = http.createServer((req, res) => {
 
 });
 
-server.listen(8080, 'localhost', () => {
+server.listen(8080, '0.0.0.0', () => {
   console.log('Listening on port 8080')
 })
